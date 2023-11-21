@@ -8,13 +8,11 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, praesentium.
         </p>
         <p>
-            <span class="badge bg-banger">
-                {{ product.price }}
-            </span>
+          <span class="badge bg-danger"> ${{ product.price }} </span>
         </p>
         <button class="btn btn-primary">
-            <i class="bi bi-cart-check"></i>
-            Add to cart
+          <i class="bi bi-cart-check"></i>
+          Add to cart
         </button>
       </div>
     </div>
@@ -23,10 +21,10 @@
 
 <script setup>
 const props = defineProps({
-    product: {
-        type: Object,
-        required: true,
-    }
+  product: {
+    type: Object,
+    required: true,
+  },
 });
 </script>
 

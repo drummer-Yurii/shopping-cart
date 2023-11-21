@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import ProductItem from '@/components/ProductItem.vue';
+import ProductItem from './ProductItem.vue';
 import { useCartStore } from '../stores/useCartStore';
 
 const data = useCartStore();
