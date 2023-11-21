@@ -28,7 +28,12 @@ export const useCartStore = defineStore('cart', {
         image: 'https://cdn.pixabay.com/photo/2017/08/11/14/19/honor-2631271__340.jpg',
       },
     ],
+    cartItems: []
   }),
-  getters: {},
+  getters: {
+    countCartItems(state) {
+        return state.cartItems.length;
+    }
+  },
   actions: {},
 });

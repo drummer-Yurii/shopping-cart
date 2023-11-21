@@ -22,7 +22,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="bi bi-cart-check"></i> Cart(0)
+                <i class="bi bi-cart-check"></i> Cart({{ data.countCartItems }})
             </a>
           </li>
         </ul>
@@ -31,6 +31,10 @@
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import { useCartStore } from '../stores/useCartStore';
+
+const data = useCartStore();
+</script>
 
 <style scoped></style>
