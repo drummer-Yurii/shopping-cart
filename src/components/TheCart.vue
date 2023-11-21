@@ -35,6 +35,12 @@
                                 </td>
                                 <td>{{ item.price }}</td>
                                 <td>{{ item.price * item.quantity }}</td>
+                                <td>
+                                    <i 
+                                        @click="data.removeFromCart(item)"
+                                        class="bi bi-cart-x text-danger fw-bold">
+                                    </i>
+                                </td>
                             </tr>
                             <tr>
                                 <th class="text-center" colspan="3">
