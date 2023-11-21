@@ -53,6 +53,27 @@ export const useCartStore = defineStore('cart', {
               timeout: 2000,
             });
         }
+    },
+    incrementQ(item) {
+        let index = this.cartItems.findIndex((product) => product.id === item.id);
+        if (index !== -1) {
+          this.cartItems[index].quantity += 1;
+          toast.success('Your item has been updated', {
+            timeout: 2000,
+          });
+        } 
+    },
+    decrementQ(item) {
+        let index = this.cartItems.findIndex((product) => product.id === item.id);
+        if (index !== -1) {
+          this.cartItems[index].quantity -= 1;
+          if (this.cartItems[index].quantity === 0) {
+            this.cartItems = this.cartItems.filter(product => product.id !== item.id);
+          }
+          toast.success('Your item has been updated', {
+            timeout: 2000,
+          });
+        } 
     }
   },
 });
